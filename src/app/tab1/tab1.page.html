@@ -1,17 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
+    <ion-title> Tab 1 </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('G')">G</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('Ab')">Ab</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('A')">A</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('Bb')">Bb</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('B')">B</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('C')">C</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('Db')">Db</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('D')">D</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('Eb')">Eb</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('E')">E</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('F')">F</ion-button></ion-col
+      >
+      <ion-col size="6" size-md="3" size-lg="2"
+        ><ion-button fill="outline" expand="block" (click)="play('Gb')">Gb</ion-button></ion-col
+      >
+    </ion-row>
+  </ion-grid>
 </ion-content>
