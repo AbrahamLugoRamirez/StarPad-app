@@ -1,47 +1,15 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title> Tab 1 </ion-title>
+    <ion-title *ngIf="isPlay"> {{note}} </ion-title>
+    <ion-title *ngIf="!isPlay"> StarPad </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-grid>
     <ion-row>
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('G')">G</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('Ab')">Ab</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('A')">A</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('Bb')">Bb</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('B')">B</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('C')">C</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('Db')">Db</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('D')">D</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('Eb')">Eb</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('E')">E</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('F')">F</ion-button></ion-col
-      >
-      <ion-col size="6" size-md="3" size-lg="2"
-        ><ion-button fill="outline" expand="block" (click)="play('Gb')">Gb</ion-button></ion-col
+      <ion-col *ngFor="let tone of musicalNotes" size="6" size-md="3" size-lg="2"
+        ><ion-button color="dark" [fill]="getFill(tone)" expand="block" (click)="play(tone)">{{tone}}</ion-button></ion-col
       >
     </ion-row>
   </ion-grid>
