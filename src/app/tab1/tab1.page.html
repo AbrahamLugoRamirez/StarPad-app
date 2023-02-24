@@ -1,7 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title *ngIf="isPlay"> {{note}} </ion-title>
-    <ion-title *ngIf="!isPlay"> StarPad </ion-title>
+    <ion-title *ngIf="isPlay"> {{note}} <ion-icon name="star-outline"></ion-icon>
+    </ion-title>
+    <ion-title *ngIf="!isPlay"> StarPad <ion-icon name="star-outline"></ion-icon>
+    </ion-title>
   </ion-toolbar>
 </ion-header>
 
