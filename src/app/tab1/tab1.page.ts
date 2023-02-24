@@ -13,18 +13,18 @@ export class Tab1Page {
   note = '';
   tone = new Audio('../../assets/group1/G.mp3');
   musicalNotes = [
-    'G',
-    'Ab',
-    'A',
-    'Bb',
-    'B',
-    'C',
-    'Db',
-    'D',
-    'Eb',
-    'E',
-    'F',
-    'Gb',
+    { label: 'G', value: 'G' },
+    { label: 'G#', value: 'Ab' },
+    { label: 'A', value: 'A' },
+    { label: 'A#', value: 'Bb' },
+    { label: 'B', value: 'B' },
+    { label: 'C', value: 'C' },
+    { label: 'C#', value: 'Db' },
+    { label: 'D', value: 'D' },
+    { label: 'D#', value: 'Eb' },
+    { label: 'E', value: 'E' },
+    { label: 'F', value: 'F' },
+    { label: 'F#', value: 'Gb' },
   ];
 
   async play(note: string) {
@@ -54,11 +54,11 @@ export class Tab1Page {
   }
 
   async delaySound(downVolumen?: boolean) {
-    for (let index = 0; index < 100 ; index++) {
+    for (let index = 0; index < 100; index++) {
       console.log(index);
       await this.setTimeOut();
 
-      downVolumen ? this.volumenDown(index) :  this.volumenUp(index);
+      downVolumen ? this.volumenDown(index) : this.volumenUp(index);
     }
   }
 
@@ -129,7 +129,7 @@ export class Tab1Page {
         break;
     }
   }
-  
+
   getFill(currentNote: string) {
     if (this.note === currentNote) {
       return 'solid';
