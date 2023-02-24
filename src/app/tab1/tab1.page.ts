@@ -8,7 +8,7 @@ import { rejects } from 'assert';
 })
 export class Tab1Page {
   constructor() {}
-
+  version = "v1.0.0"
   isPlay = false;
   note = '';
   tone = new Audio('../../assets/group1/G.mp3');
