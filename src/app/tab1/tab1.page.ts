@@ -79,6 +79,7 @@ export class Tab1Page {
       await promise
         .then(async () => {
           this.delaySound();
+          this.tone.loop = true;
           console.log('Playing...');
         })
         .catch(function (error: any) {
