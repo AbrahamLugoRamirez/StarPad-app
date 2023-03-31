@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import packageJson  from '../../../package.json'
 import { rejects } from 'assert';
 
 @Component({
@@ -8,7 +9,7 @@ import { rejects } from 'assert';
 })
 export class Tab1Page {
   constructor() {}
-  version = "v1.0.0"
+  version = packageJson.version
   isPlay = false;
   note = '';
   tone = new Audio('../../assets/group1/G.mp3');
