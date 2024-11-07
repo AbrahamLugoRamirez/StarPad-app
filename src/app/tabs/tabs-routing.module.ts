@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
-import {
-  RouterModule,
-  Routes,
-} from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 import { MajorPadsComponent } from '../major-pads/major-pads.component';
 
@@ -29,12 +26,16 @@ const routes: Routes = [
       },
     ],
   },
-  { path: 'pad1', component: MajorPadsComponent },
-  { path: 'pad2', component: MajorPadsComponent },
-  { path: 'pad3', component: MajorPadsComponent },
-
+  { path: 'pad1', redirectTo: '/pad1', pathMatch: 'full' },
+  { path: 'pad2', redirectTo: '/pad2', pathMatch: 'full' },
+  { path: 'pad3', redirectTo: '/pad3', pathMatch: 'full' },
   {
     path: '',
+    redirectTo: '/pad1',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
     redirectTo: '/pad1',
     pathMatch: 'full',
   },
