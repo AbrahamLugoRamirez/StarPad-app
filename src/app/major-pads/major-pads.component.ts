@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import packageJson  from '../../../package.json'
+import packageJson from '../../../package.json'
 import { rejects } from 'assert';
 
 @Component({
-  selector: 'app-tab1',
-  templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss'],
+  selector: 'major-pads',
+  templateUrl: 'major-pads.component.html',
+  styleUrls: ['major-pads.component.scss'],
 })
-export class Tab1Page {
-  constructor() {}
+export class MajorPadsComponent {
+  constructor() { }
   version = 'v' + packageJson.version;
   isPlay = false;
   note = '';
