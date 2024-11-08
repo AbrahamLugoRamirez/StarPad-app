@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import packageJson from '../../../package.json'
-import { rejects } from 'assert';
+
 
 @Component({
   selector: 'major-pads',

@@ -1,28 +1,30 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title *ngIf="isPlay">
-      {{note}} <ion-icon name="star-outline"></ion-icon>
+      {{ note }} <ion-icon name="star-outline"></ion-icon>
     </ion-title>
     <ion-title *ngIf="!isPlay">
       StarPad <ion-icon name="star-outline"></ion-icon>
     </ion-title>
+    <ion-progress-bar type="indeterminate" *ngIf="isPlay"></ion-progress-bar>
   </ion-toolbar>
 </ion-header>
 
 <ion-content style="position: relative">
-  <ion-grid style="position: absolute; top: 20%; width: 100%">
-    <ion-row>
+  <ion-grid style="position: absolute; top: 4%; width: 100%; height: 90%">
+    <ion-row style="height: 100%">
       <ion-col
         *ngFor="let tone of musicalNotes"
         size="6"
         size-md="3"
         size-lg="2"
         ><ion-button
+          style="height: 100%"
           color="dark"
           [fill]="getFill(tone.value)"
           expand="block"
           (click)="play(tone.value)"
-          >{{tone.label}}</ion-button
+          >{{ tone.label }}</ion-button
         ></ion-col
       >
     </ion-row>
@@ -31,6 +33,8 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-title><p>{{version}}</p></ion-title>
+    <ion-title
+      ><p>{{ version }}</p></ion-title
+    >
   </ion-toolbar>
 </ion-footer>

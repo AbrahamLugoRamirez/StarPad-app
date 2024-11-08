@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
 import { MajorPadsComponent } from '../major-pads/major-pads.component';
+import { MinorPadsComponent } from '../minor-pads/minor-pads.component';
 
 const routes: Routes = [
   {
@@ -11,8 +12,7 @@ const routes: Routes = [
       { path: 'pad1', component: MajorPadsComponent },
       {
         path: 'pad2',
-        loadChildren: () =>
-          import('../tab2/tab2.module').then((m) => m.Tab2PageModule),
+        component: MinorPadsComponent,
       },
       {
         path: 'pad3',
