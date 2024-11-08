@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title *ngIf="isPlay">
-      {{note}} <ion-icon name="star-outline"></ion-icon>
+      {{ note }} <ion-icon name="star-outline"></ion-icon>
     </ion-title>
     <ion-title *ngIf="!isPlay">
       StarPad <ion-icon name="star-outline"></ion-icon>
@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content style="position: relative">
-  <ion-grid style="position: absolute; top: 20%; width: 100%">
+  <ion-grid style="position: absolute; top: 10%; width: 100%">
     <ion-row>
       <ion-col
         *ngFor="let tone of musicalNotes"
@@ -18,11 +18,12 @@
         size-md="3"
         size-lg="2"
         ><ion-button
+          style="height: 100%"
           color="dark"
           [fill]="getFill(tone.value)"
           expand="block"
           (click)="play(tone.value)"
-          >{{tone.label}}</ion-button
+          >{{ tone.label }}</ion-button
         ></ion-col
       >
     </ion-row>
@@ -31,6 +32,8 @@
 
 <ion-footer>
   <ion-toolbar>
-    <ion-title><p>{{version}}</p></ion-title>
+    <ion-title
+      ><p>{{ version }}</p></ion-title
+    >
   </ion-toolbar>
 </ion-footer>
